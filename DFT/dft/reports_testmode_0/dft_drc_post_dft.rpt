@@ -1,0 +1,460 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U0_CLK_GATE/U0_TLATNCAX12M has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1
+
+-----------------------------------------------------------------
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 363 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+         U0_CLK_GATE/U0_TLATNCAX12M
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 362 cells are valid scan cells
+         U0_RST_SYNC/RST_reg_reg[0]
+         U0_RST_SYNC/RST_reg_reg[1]
+         U0_ref_Data_sync/sync_bus_reg[7]
+         U0_ref_Data_sync/sync_bus_reg[3]
+         U0_ref_Data_sync/sync_bus_reg[0]
+         U0_ref_Data_sync/enable_pulse_reg
+         U0_ref_Data_sync/sync_bus_reg[6]
+         U0_ref_Data_sync/sync_bus_reg[2]
+         U0_ref_Data_sync/sync_bus_reg[1]
+         U0_ref_Data_sync/sync_bus_reg[5]
+         U0_ref_Data_sync/sync_bus_reg[4]
+         U0_ref_Data_sync/en_reg_reg[0]
+         U0_ref_Data_sync/en_reg_reg[1]
+         U0_PULSE_GEN/reg_SIG_0_reg
+         U0_PULSE_GEN/reg_SIG_1_reg
+         U0_ClkDiv/counter_reg[7]
+         U0_ClkDiv/CLK_FLAG_reg
+         U0_ClkDiv/counter_reg[0]
+         U0_ClkDiv/counter_reg[1]
+         U0_ClkDiv/counter_reg[2]
+         U0_ClkDiv/counter_reg[3]
+         U0_ClkDiv/counter_reg[4]
+         U0_ClkDiv/counter_reg[5]
+         U0_ClkDiv/counter_reg[6]
+         U0_ClkDiv/div_clk_reg
+         U1_ClkDiv/counter_reg[7]
+         U1_ClkDiv/counter_reg[0]
+         U1_ClkDiv/counter_reg[1]
+         U1_ClkDiv/counter_reg[2]
+         U1_ClkDiv/counter_reg[3]
+         U1_ClkDiv/counter_reg[4]
+         U1_ClkDiv/counter_reg[5]
+         U1_ClkDiv/counter_reg[6]
+         U1_ClkDiv/div_clk_reg
+         U1_ClkDiv/CLK_FLAG_reg
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[6]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[5]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[4]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[2]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[1]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[0]
+         U0_SYS_CTRL/W_add_reg_reg[2]
+         U0_SYS_CTRL/W_add_reg_reg[0]
+         U0_SYS_CTRL/W_add_reg_reg[3]
+         U0_SYS_CTRL/W_add_reg_reg[1]
+         U0_SYS_CTRL/Current_State_reg[2]
+         U0_SYS_CTRL/Current_State_reg[3]
+         U0_SYS_CTRL/Current_State_reg[0]
+         U0_SYS_CTRL/Current_State_reg[1]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[7]
+         U0_SYS_CTRL/RX_P_DATA_reg_reg[3]
+         U0_RegFile/REG_FILE_reg[3][5]
+         U0_RegFile/RdData_reg[7]
+         U0_RegFile/RdData_reg[6]
+         U0_RegFile/RdData_reg[5]
+         U0_RegFile/RdData_reg[4]
+         U0_RegFile/RdData_reg[3]
+         U0_RegFile/RdData_reg[2]
+         U0_RegFile/RdData_reg[1]
+         U0_RegFile/RdData_reg[0]
+         U0_RegFile/REG_FILE_reg[13][7]
+         U0_RegFile/REG_FILE_reg[13][6]
+         U0_RegFile/REG_FILE_reg[13][5]
+         U0_RegFile/REG_FILE_reg[13][4]
+         U0_RegFile/REG_FILE_reg[13][3]
+         U0_RegFile/REG_FILE_reg[13][2]
+         U0_RegFile/REG_FILE_reg[13][1]
+         U0_RegFile/REG_FILE_reg[13][0]
+         U0_RegFile/REG_FILE_reg[9][7]
+         U0_RegFile/REG_FILE_reg[9][6]
+         U0_RegFile/REG_FILE_reg[9][5]
+         U0_RegFile/REG_FILE_reg[9][4]
+         U0_RegFile/REG_FILE_reg[9][3]
+         U0_RegFile/REG_FILE_reg[9][2]
+         U0_RegFile/REG_FILE_reg[9][1]
+         U0_RegFile/REG_FILE_reg[9][0]
+         U0_RegFile/REG_FILE_reg[5][7]
+         U0_RegFile/REG_FILE_reg[5][6]
+         U0_RegFile/REG_FILE_reg[5][5]
+         U0_RegFile/REG_FILE_reg[5][4]
+         U0_RegFile/REG_FILE_reg[5][3]
+         U0_RegFile/REG_FILE_reg[5][2]
+         U0_RegFile/REG_FILE_reg[5][1]
+         U0_RegFile/REG_FILE_reg[5][0]
+         U0_RegFile/REG_FILE_reg[15][7]
+         U0_RegFile/REG_FILE_reg[15][6]
+         U0_RegFile/REG_FILE_reg[15][5]
+         U0_RegFile/REG_FILE_reg[15][4]
+         U0_RegFile/REG_FILE_reg[15][3]
+         U0_RegFile/REG_FILE_reg[15][2]
+         U0_RegFile/REG_FILE_reg[15][1]
+         U0_RegFile/REG_FILE_reg[15][0]
+         U0_RegFile/REG_FILE_reg[11][7]
+         U0_RegFile/REG_FILE_reg[11][6]
+         U0_RegFile/REG_FILE_reg[11][5]
+         U0_RegFile/REG_FILE_reg[11][4]
+         U0_RegFile/REG_FILE_reg[11][3]
+         U0_RegFile/REG_FILE_reg[11][2]
+         U0_RegFile/REG_FILE_reg[11][1]
+         U0_RegFile/REG_FILE_reg[11][0]
+         U0_RegFile/REG_FILE_reg[7][7]
+         U0_RegFile/REG_FILE_reg[7][6]
+         U0_RegFile/REG_FILE_reg[7][5]
+         U0_RegFile/REG_FILE_reg[7][4]
+         U0_RegFile/REG_FILE_reg[7][3]
+         U0_RegFile/REG_FILE_reg[7][2]
+         U0_RegFile/REG_FILE_reg[7][1]
+         U0_RegFile/REG_FILE_reg[7][0]
+         U0_RegFile/REG_FILE_reg[14][7]
+         U0_RegFile/REG_FILE_reg[14][6]
+         U0_RegFile/REG_FILE_reg[14][5]
+         U0_RegFile/REG_FILE_reg[14][4]
+         U0_RegFile/REG_FILE_reg[14][3]
+         U0_RegFile/REG_FILE_reg[14][2]
+         U0_RegFile/REG_FILE_reg[14][1]
+         U0_RegFile/REG_FILE_reg[14][0]
+         U0_RegFile/REG_FILE_reg[10][7]
+         U0_RegFile/REG_FILE_reg[10][6]
+         U0_RegFile/REG_FILE_reg[10][5]
+         U0_RegFile/REG_FILE_reg[10][4]
+         U0_RegFile/REG_FILE_reg[10][3]
+         U0_RegFile/REG_FILE_reg[10][2]
+         U0_RegFile/REG_FILE_reg[10][1]
+         U0_RegFile/REG_FILE_reg[10][0]
+         U0_RegFile/REG_FILE_reg[6][7]
+         U0_RegFile/REG_FILE_reg[6][6]
+         U0_RegFile/REG_FILE_reg[6][5]
+         U0_RegFile/REG_FILE_reg[6][4]
+         U0_RegFile/REG_FILE_reg[6][3]
+         U0_RegFile/REG_FILE_reg[6][2]
+         U0_RegFile/REG_FILE_reg[6][1]
+         U0_RegFile/REG_FILE_reg[6][0]
+         U0_RegFile/REG_FILE_reg[12][7]
+         U0_RegFile/REG_FILE_reg[12][6]
+         U0_RegFile/REG_FILE_reg[12][5]
+         U0_RegFile/REG_FILE_reg[12][4]
+         U0_RegFile/REG_FILE_reg[12][3]
+         U0_RegFile/REG_FILE_reg[12][2]
+         U0_RegFile/REG_FILE_reg[12][1]
+         U0_RegFile/REG_FILE_reg[12][0]
+         U0_RegFile/REG_FILE_reg[8][7]
+         U0_RegFile/REG_FILE_reg[8][6]
+         U0_RegFile/REG_FILE_reg[8][5]
+         U0_RegFile/REG_FILE_reg[8][4]
+         U0_RegFile/REG_FILE_reg[8][3]
+         U0_RegFile/REG_FILE_reg[8][2]
+         U0_RegFile/REG_FILE_reg[8][1]
+         U0_RegFile/REG_FILE_reg[8][0]
+         U0_RegFile/REG_FILE_reg[4][7]
+         U0_RegFile/REG_FILE_reg[4][6]
+         U0_RegFile/REG_FILE_reg[4][5]
+         U0_RegFile/REG_FILE_reg[4][4]
+         U0_RegFile/REG_FILE_reg[4][3]
+         U0_RegFile/REG_FILE_reg[4][2]
+         U0_RegFile/REG_FILE_reg[4][1]
+         U0_RegFile/REG_FILE_reg[4][0]
+         U0_RegFile/RdValid_reg
+         U0_RegFile/REG_FILE_reg[3][0]
+         U0_RegFile/REG_FILE_reg[3][2]
+         U0_RegFile/REG_FILE_reg[3][3]
+         U0_RegFile/REG_FILE_reg[3][4]
+         U0_RegFile/REG_FILE_reg[3][7]
+         U0_RegFile/REG_FILE_reg[3][6]
+         U0_RegFile/REG_FILE_reg[2][0]
+         U0_RegFile/REG_FILE_reg[2][1]
+         U0_RegFile/REG_FILE_reg[3][1]
+         U0_RegFile/REG_FILE_reg[2][4]
+         U0_RegFile/REG_FILE_reg[2][2]
+         U0_RegFile/REG_FILE_reg[2][3]
+         U0_RegFile/REG_FILE_reg[2][6]
+         U0_RegFile/REG_FILE_reg[0][1]
+         U0_RegFile/REG_FILE_reg[0][0]
+         U0_RegFile/REG_FILE_reg[0][2]
+         U0_RegFile/REG_FILE_reg[0][3]
+         U0_RegFile/REG_FILE_reg[0][4]
+         U0_RegFile/REG_FILE_reg[0][5]
+         U0_RegFile/REG_FILE_reg[0][7]
+         U0_RegFile/REG_FILE_reg[0][6]
+         U0_RegFile/REG_FILE_reg[1][7]
+         U0_RegFile/REG_FILE_reg[1][6]
+         U0_RegFile/REG_FILE_reg[1][5]
+         U0_RegFile/REG_FILE_reg[1][4]
+         U0_RegFile/REG_FILE_reg[1][1]
+         U0_RegFile/REG_FILE_reg[1][3]
+         U0_RegFile/REG_FILE_reg[1][2]
+         U0_RegFile/REG_FILE_reg[2][5]
+         U0_RegFile/REG_FILE_reg[1][0]
+         U0_RegFile/REG_FILE_reg[2][7]
+         U0_ALU/ALU_OUT_reg[15]
+         U0_ALU/ALU_OUT_reg[14]
+         U0_ALU/ALU_OUT_reg[13]
+         U0_ALU/ALU_OUT_reg[12]
+         U0_ALU/ALU_OUT_reg[11]
+         U0_ALU/ALU_OUT_reg[10]
+         U0_ALU/ALU_OUT_reg[9]
+         U0_ALU/ALU_OUT_reg[8]
+         U0_ALU/ALU_OUT_reg[7]
+         U0_ALU/ALU_OUT_reg[6]
+         U0_ALU/ALU_OUT_reg[5]
+         U0_ALU/ALU_OUT_reg[4]
+         U0_ALU/ALU_OUT_reg[3]
+         U0_ALU/ALU_OUT_reg[2]
+         U0_ALU/ALU_OUT_reg[1]
+         U0_ALU/ALU_OUT_reg[0]
+         U0_ALU/OUT_VALID_reg
+         U0_ref_Data_sync/U_PULSE_GEN/reg_SIG_0_reg
+         U0_ref_Data_sync/U_PULSE_GEN/reg_SIG_1_reg
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[5][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[1][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[7][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[3][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[6][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[2][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[4][0]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][7]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][6]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][5]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][4]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][3]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][2]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][1]
+         U0_ASYNC_FIFO/U_FIFO_MEM/FIFO_MEM_reg[0][0]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[2][1]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[1][1]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[0][1]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[3][0]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[2][0]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[1][0]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[0][0]
+         U0_ASYNC_FIFO/U_W2R_SYNC/SYNC_reg_reg[3][1]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[1][1]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[0][1]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[3][1]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[2][1]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[3][0]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[2][0]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[1][0]
+         U0_ASYNC_FIFO/U_R2W_SYNC/SYNC_reg_reg[0][0]
+         U0_ASYNC_FIFO/U_FIFO_WR/inter_addr_reg[3]
+         U0_ASYNC_FIFO/U_FIFO_WR/inter_addr_reg[2]
+         U0_ASYNC_FIFO/U_FIFO_WR/G_wptr_reg[3]
+         U0_ASYNC_FIFO/U_FIFO_WR/G_wptr_reg[2]
+         U0_ASYNC_FIFO/U_FIFO_WR/G_wptr_reg[1]
+         U0_ASYNC_FIFO/U_FIFO_WR/G_wptr_reg[0]
+         U0_ASYNC_FIFO/U_FIFO_WR/inter_addr_reg[1]
+         U0_ASYNC_FIFO/U_FIFO_WR/inter_addr_reg[0]
+         U0_ASYNC_FIFO/U_FIFO_RD/inter_addr_reg[3]
+         U0_ASYNC_FIFO/U_FIFO_RD/inter_addr_reg[2]
+         U0_ASYNC_FIFO/U_FIFO_RD/inter_addr_reg[0]
+         U0_ASYNC_FIFO/U_FIFO_RD/G_rptr_reg[3]
+         U0_ASYNC_FIFO/U_FIFO_RD/G_rptr_reg[2]
+         U0_ASYNC_FIFO/U_FIFO_RD/G_rptr_reg[1]
+         U0_ASYNC_FIFO/U_FIFO_RD/G_rptr_reg[0]
+         U0_ASYNC_FIFO/U_FIFO_RD/inter_addr_reg[1]
+         U0_UART/TX_UNIT/parity_calc/Par_bit_reg
+         U0_UART/TX_UNIT/FSM/Current_state_reg[1]
+         U0_UART/TX_UNIT/FSM/Current_state_reg[0]
+         U0_UART/TX_UNIT/FSM/Current_state_reg[2]
+         U0_UART/TX_UNIT/SER/ser_done_reg
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[5]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[1]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[7]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[3]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[6]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[2]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[4]
+         U0_UART/TX_UNIT/SER/P_DATA_reg_reg[0]
+         U0_UART/TX_UNIT/SER/counter_reg[2]
+         U0_UART/TX_UNIT/SER/counter_reg[0]
+         U0_UART/TX_UNIT/SER/ser_data_reg
+         U0_UART/TX_UNIT/SER/counter_reg[1]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[5]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[4]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[1]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[0]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[7]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[6]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[3]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg_reg[2]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[5]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[1]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[4]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[0]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[7]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[3]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[6]
+         U0_UART/RX_UNIT/U_desrial/P_DATA_reg[2]
+         U0_UART/RX_UNIT/U_desrial/counter_reg[3]
+         U0_UART/RX_UNIT/U_desrial/counter_reg[1]
+         U0_UART/RX_UNIT/U_desrial/counter_reg[2]
+         U0_UART/RX_UNIT/U_desrial/counter_reg[0]
+         U0_UART/RX_UNIT/U_edge_counter/bit_cnt_reg[3]
+         U0_UART/RX_UNIT/U_edge_counter/bit_cnt_reg[2]
+         U0_UART/RX_UNIT/U_edge_counter/bit_cnt_reg[1]
+         U0_UART/RX_UNIT/U_edge_counter/bit_cnt_reg[0]
+         U0_UART/RX_UNIT/U_edge_counter/edge_cnt_reg[4]
+         U0_UART/RX_UNIT/U_edge_counter/edge_cnt_reg[1]
+         U0_UART/RX_UNIT/U_edge_counter/edge_cnt_reg[0]
+         U0_UART/RX_UNIT/U_edge_counter/edge_cnt_reg[3]
+         U0_UART/RX_UNIT/U_edge_counter/edge_cnt_reg[2]
+         U0_UART/RX_UNIT/U_sampler/sampled_data_reg[1]
+         U0_UART/RX_UNIT/U_sampler/sampled_data_reg[0]
+         U0_UART/RX_UNIT/U_sampler/counter_reg[1]
+         U0_UART/RX_UNIT/U_sampler/counter_reg[0]
+         U0_UART/RX_UNIT/U_sampler/sampled_bit_reg
+         U0_UART/RX_UNIT/U_Par_check/parity_error_reg
+         U0_UART/RX_UNIT/U_start_chk/start_glitch_reg
+         U0_UART/RX_UNIT/U_stop_chk/stop_error_reg
+         U0_UART/RX_UNIT/U_FSM/Current_state_reg[0]
+         U0_UART/RX_UNIT/U_FSM/Current_state_reg[2]
+         U0_UART/RX_UNIT/U_FSM/Current_state_reg[1]
+         U1_RST_SYNC/RST_reg_reg[0]
+         U1_RST_SYNC/RST_reg_reg[1]
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 15694 faults were added to fault list.
+ 0            7090   5330         0/0/0    65.40%      0.00
+ 0            1624   3703         1/0/0    75.85%      0.00
+ 0             719   2983         2/0/0    80.48%      0.00
+ 0             527   2455         3/0/1    83.88%      0.00
+ 0             488   1964         5/0/1    87.03%      0.00
+ 0             372   1592         5/0/1    89.42%      0.00
+ 0             250   1337         9/0/1    91.06%      0.00
+ 0             207   1126        10/1/1    92.41%      0.00
+ 0             250    874        11/1/2    94.03%      0.00
+ 0             105    765        15/1/2    94.73%      0.00
+ 0             146    612        21/1/3    95.71%      0.00
+ 0              93    515        25/1/4    96.34%      0.00
+ 0             100    410        30/1/4    97.01%      0.00
+ 0             116    285        37/1/4    97.82%      0.00
+ 0              65    210        42/1/4    98.30%      0.00
+ 0              82    117        48/1/5    98.90%      0.00
+ 0              48     60        53/1/5    99.27%      0.00
+ 0              47     11        54/1/6    99.58%      0.00
+ 0               2      9        54/1/6    99.60%      0.08
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      15414
+ Possibly detected                PT          1
+ Undetectable                     UD        217
+ ATPG untestable                  AU         54
+ Not detected                     ND          8
+ -----------------------------------------------
+ total faults                             15694
+ test coverage                            99.60%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

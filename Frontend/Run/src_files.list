@@ -1,0 +1,50 @@
+# -------------------- UART TX Path --------------------
+UART_TX_FSM.v          # UART Transmit Finite State Machine
+UART_TX_Parity.v       # UART Transmit Parity Generator
+UART_TX_Serializer.v   # UART Transmit Serializer
+UART_TX_Top.v          # UART TX Top module (integration)
+
+# -------------------- UART RX Path --------------------
+UART_RX_deserializer.v # UART Receive Deserializer
+UART_RX_edge_counter.v # UART RX Edge Counter for sampling
+UART_RX_FSM.v          # UART Receive Finite State Machine
+UART_RX_parity_check.v # UART RX Parity Checker
+UART_RX_sampler.v      # UART RX Sampler for incoming bits
+UART_RX_start_check.v  # UART RX Start Bit Checker
+UART_RX_stop_check.v   # UART RX Stop Bit Checker
+UART_RX_Top.v          # UART RX Top module (integration)
+
+# -------------------- UART Top ------------------------
+UART_TOP.v             # Full UART Top Module (TX + RX)
+
+# -------------------- System Control ------------------
+SYS_CTRL.sv            # System Controller (control FSM / logic)
+
+# -------------------- Processing Blocks ---------------
+ALU.v                  # Arithmetic Logic Unit
+RegFile.v              # Register File
+
+# -------------------- Synchronization -----------------
+DATA_SYNC.v            # Multi-bit Data Synchronizer
+PULSE_GEN.v            # Pulse Generator for crossing domains
+ASYNC_FIFO_BIT_SYNC.v  # FIFO Pointer Bit Synchronizer
+ASYNC_FIFO_MEM.v       # Async FIFO Memory Block
+ASYNC_FIFO_RD.v        # Async FIFO Read Controller
+ASYNC_FIFO_WR.v        # Async FIFO Write Controller
+ASYNC_FIFO_TOP.v       # Async FIFO Top (integration)
+
+# -------------------- Clocking ------------------------
+Clk_Divider.v          # Clock Divider
+CLK_GATE.v             # Clock Gating Module
+RST_SYNC.v             # Reset Synchronizer
+CLKDIV_MUX.v           # MUX to decide div ratio of RX CLOCK
+
+# -------------------- System Top ----------------------
+SYS_TOP.v              # System Top-level Integration
+
+# -------------------- System TB ----------------------
+TB_CC_FC.sv              # System Constraints + coverage
+TB_TOP.sv                # System TB
+
+# -------------------- System Assertions ----------------------
+TB_SVA.sv                # System Assertions
