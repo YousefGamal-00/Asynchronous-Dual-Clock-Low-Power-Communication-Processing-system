@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : K-2015.06
-// Date      : Fri Sep 26 23:34:21 2025
+// Date      : Sun Sep 28 23:57:13 2025
 /////////////////////////////////////////////////////////////
 
 
@@ -58,10 +58,12 @@ endmodule
 module MUX_2X1_6 ( IN_0, IN_1, SEL, OUT );
   input IN_0, IN_1, SEL;
   output OUT;
-  wire   N0;
+  wire   N0, n1, n2;
   assign N0 = SEL;
 
-  MX2X2M U1 ( .A(IN_0), .B(IN_1), .S0(N0), .Y(OUT) );
+  MX2X2M U1 ( .A(n2), .B(IN_1), .S0(N0), .Y(OUT) );
+  INVXLM U2 ( .A(IN_0), .Y(n1) );
+  INVXLM U3 ( .A(n1), .Y(n2) );
 endmodule
 
 
@@ -3466,20 +3468,19 @@ endmodule
 
 
 module SYS_TOP ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST_N, REF_CLK, 
-        UART_CLK, UART_RX_IN, UART_TX_O, parity_error, framing_error, test_si4, 
-        test_so4 );
-  input [2:0] SI;
-  output [2:0] SO;
+        UART_CLK, UART_RX_IN, UART_TX_O, parity_error, framing_error );
+  input [3:0] SI;
+  output [3:0] SO;
   input scan_clk, scan_rst, test_mode, SE, RST_N, REF_CLK, UART_CLK,
-         UART_RX_IN, test_si4;
-  output UART_TX_O, parity_error, framing_error, test_so4;
+         UART_RX_IN;
+  output UART_TX_O, parity_error, framing_error;
   wire   MUXED_REF_CLK, MUXED_UART_CLK, UART_TX_CLK, MUXED_TX_CLK, UART_RX_CLK,
          MUXED_RX_CLK, MUXED_RST, SYNC_REF_RST, MUXED_REF_RST, SYNC_UART_RST,
          MUXED_UART_RST, UART_RX_V_OUT, UART_RX_V_SYNC, UART_TX_VLD,
          UART_TX_Busy_PULSE, FIFO_FULL, UART_TX_V_SYNC, UART_TX_Busy,
          ALU_OUT_VLD, RF_RdData_VLD, RF_WrEn, RF_RdEn, ALU_EN, CLKG_EN,
          ALU_CLK, n1, n2, n3, n4, n5, n6, n7, n8, n10, n11, n12, n17, n18, n19,
-         n23, n24, n25, n26, n27, n28, n29, n30, n31, n32, n33, n34;
+         n24, n25, n26, n27, n28, n29, n30, n31, n32, n33, n34, n35, n36;
   wire   [7:0] UART_RX_OUT;
   wire   [7:0] UART_RX_SYNC;
   wire   [7:0] UART_TX_IN;
@@ -3494,7 +3495,6 @@ module SYS_TOP ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST_N, REF_CLK,
   wire   [7:0] RF_WrData;
   wire   [7:0] Operand_A;
   wire   [7:0] Operand_B;
-  assign test_so4 = SYNC_REF_RST;
 
   INVX4M U3 ( .A(n8), .Y(n7) );
   INVX2M U4 ( .A(n6), .Y(n5) );
@@ -3504,18 +3504,19 @@ module SYS_TOP ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST_N, REF_CLK,
   BUFX2M U8 ( .A(UART_RX_IN), .Y(n2) );
   INVX2M U9 ( .A(MUXED_REF_RST), .Y(n8) );
   INVX2M U10 ( .A(MUXED_UART_RST), .Y(n6) );
-  INVXLM U12 ( .A(n32), .Y(n23) );
-  INVXLM U13 ( .A(n23), .Y(n24) );
-  INVXLM U14 ( .A(n23), .Y(n25) );
-  INVXLM U15 ( .A(n23), .Y(n26) );
-  DLY1X1M U16 ( .A(n33), .Y(n27) );
-  INVXLM U17 ( .A(n34), .Y(n28) );
-  INVXLM U18 ( .A(n28), .Y(n29) );
-  INVXLM U19 ( .A(n28), .Y(n30) );
-  INVXLM U20 ( .A(SE), .Y(n31) );
-  INVXLM U21 ( .A(n31), .Y(n32) );
-  INVXLM U22 ( .A(n31), .Y(n33) );
-  INVXLM U23 ( .A(n31), .Y(n34) );
+  DLY1X1M U13 ( .A(SYNC_REF_RST), .Y(n24) );
+  INVXLM U14 ( .A(n34), .Y(n25) );
+  INVXLM U15 ( .A(n25), .Y(n26) );
+  INVXLM U16 ( .A(n25), .Y(n27) );
+  INVXLM U17 ( .A(n25), .Y(n28) );
+  DLY1X1M U18 ( .A(n35), .Y(n29) );
+  INVXLM U19 ( .A(n36), .Y(n30) );
+  INVXLM U20 ( .A(n30), .Y(n31) );
+  INVXLM U21 ( .A(n30), .Y(n32) );
+  INVXLM U22 ( .A(SE), .Y(n33) );
+  INVXLM U23 ( .A(n33), .Y(n34) );
+  INVXLM U24 ( .A(n33), .Y(n35) );
+  INVXLM U25 ( .A(n33), .Y(n36) );
   MUX_2X1_1 U0_REF_CLK_MUX ( .IN_0(REF_CLK), .IN_1(scan_clk), .SEL(test_mode), 
         .OUT(MUXED_REF_CLK) );
   MUX_2X1_4 U1_UART_CLK_MUX ( .IN_0(UART_CLK), .IN_1(scan_clk), .SEL(test_mode), .OUT(MUXED_UART_CLK) );
@@ -3525,57 +3526,58 @@ module SYS_TOP ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST_N, REF_CLK,
         test_mode), .OUT(MUXED_RX_CLK) );
   MUX_2X1_0 U4_RST_MUX ( .IN_0(RST_N), .IN_1(scan_rst), .SEL(test_mode), .OUT(
         MUXED_RST) );
-  MUX_2X1_6 U5_SYNC_RST_MUX_REF ( .IN_0(SYNC_REF_RST), .IN_1(scan_rst), .SEL(
-        test_mode), .OUT(MUXED_REF_RST) );
+  MUX_2X1_6 U5_SYNC_RST_MUX_REF ( .IN_0(n24), .IN_1(scan_rst), .SEL(test_mode), 
+        .OUT(MUXED_REF_RST) );
   MUX_2X1_5 U6_SYNC_RST_MUX_UART ( .IN_0(SYNC_UART_RST), .IN_1(scan_rst), 
         .SEL(test_mode), .OUT(MUXED_UART_RST) );
   RST_SYNC_NUM_STAGES2_test_0 U0_RST_SYNC ( .CLK(MUXED_UART_CLK), .RST(
-        MUXED_RST), .SYNC_RST(SYNC_UART_RST), .test_si(n17), .test_se(n29) );
+        MUXED_RST), .SYNC_RST(SYNC_UART_RST), .test_si(n17), .test_se(n31) );
   RST_SYNC_NUM_STAGES2_test_1 U1_RST_SYNC ( .CLK(MUXED_REF_CLK), .RST(
-        MUXED_RST), .SYNC_RST(SYNC_REF_RST), .test_si(n10), .test_se(n25) );
+        MUXED_RST), .SYNC_RST(SYNC_REF_RST), .test_si(n10), .test_se(n27) );
   DATA_SYNC_NUM_STAGES2_BUS_WIDTH8_test_1 U0_ref_Data_sync ( .CLK(
         MUXED_REF_CLK), .RST(n7), .BUS_EN(UART_RX_V_OUT), .unsync_bus(
         UART_RX_OUT), .sync_bus(UART_RX_SYNC), .enable_pulse(UART_RX_V_SYNC), 
-        .test_si(n11), .test_se(n34) );
+        .test_si(n11), .test_se(n36) );
   ASYNC_FIFO_TOP_DATA_WIDTH8_DEPTH8_test_1 U0_ASYNC_FIFO ( .W_CLK(
         MUXED_REF_CLK), .W_RST(n7), .W_INC(UART_TX_VLD), .R_CLK(MUXED_TX_CLK), 
         .R_RST(n5), .R_INC(UART_TX_Busy_PULSE), .WR_DATA(UART_TX_IN), 
         .RD_DATA(UART_TX_SYNC), .FULL(FIFO_FULL), .EMPTY(UART_TX_V_SYNC), 
-        .test_si2(SI[1]), .test_si1(ALU_OUT_VLD), .test_so2(n19), .test_so1(
-        SO[2]), .test_se(SE) );
+        .test_si2(SI[2]), .test_si1(ALU_OUT_VLD), .test_so2(n19), .test_so1(
+        SO[3]), .test_se(SE) );
   PULSE_GEN_test_0 U0_PULSE_GEN ( .CLK(MUXED_TX_CLK), .RST(n5), .LVL_SIG(
         UART_TX_Busy), .PULSE_SIG(UART_TX_Busy_PULSE), .test_si(n18), 
-        .test_so(n17), .test_se(n34) );
+        .test_so(n17), .test_se(n36) );
   Clk_Divider_test_0 U0_ClkDiv ( .i_ref_clk(MUXED_UART_CLK), .i_rst_n(n5), 
         .i_clk_en(1'b1), .i_div_ratio(DIV_RATIO), .o_div_clk(UART_TX_CLK), 
-        .test_si(n19), .test_so(n18), .test_se(n26) );
+        .test_si(n19), .test_so(n18), .test_se(n28) );
   CLKDIV_MUX U0_CLKDIV_MUX ( .IN(UART_Config[7:2]), .OUT(DIV_RATIO_RX) );
   Clk_Divider_test_1 U1_ClkDiv ( .i_ref_clk(MUXED_UART_CLK), .i_rst_n(n5), 
         .i_clk_en(1'b1), .i_div_ratio({1'b0, 1'b0, 1'b0, 1'b0, DIV_RATIO_RX}), 
         .o_div_clk(UART_RX_CLK), .test_si(UART_RX_SYNC[7]), .test_so(n10), 
-        .test_se(n30) );
+        .test_se(n32) );
   UART_TOP_test_1 U0_UART ( .TX_CLK(MUXED_TX_CLK), .RX_CLK(MUXED_RX_CLK), 
         .RST(n5), .PAR_TYP(UART_Config[1]), .PAR_EN(UART_Config[0]), 
         .Prescale(UART_Config[7:2]), .TX_IN_P(UART_TX_SYNC), .TX_IN_V(n1), 
         .RX_IN_S(n2), .TX_OUT_S(UART_TX_O), .TX_OUT_V(UART_TX_Busy), 
         .RX_OUT_P(UART_RX_OUT), .RX_OUT_V(UART_RX_V_OUT), .parity_error(
-        parity_error), .stop_error(framing_error), .test_si(n12), .test_so(n11), .test_se(n27) );
+        parity_error), .stop_error(framing_error), .test_si(n12), .test_so(n11), .test_se(n29) );
   SYS_CTRL_test_1 U0_SYS_CTRL ( .CLK(MUXED_REF_CLK), .RST(n7), .ALU_Valid(
         ALU_OUT_VLD), .Rd_Data_Valid(RF_RdData_VLD), .RX_ENABLE(UART_RX_V_SYNC), .FIFO_FULL(FIFO_FULL), .Rd_Data(RF_RdData), .RX_P_DATA(UART_RX_SYNC), 
         .ALU_OUT(ALU_OUT), .Wr_En(RF_WrEn), .Rd_En(RF_RdEn), .ALU_EN(ALU_EN), 
         .CLK_EN(CLKG_EN), .TX_D_VLD(UART_TX_VLD), .ALU_FUN(ALU_FUN), .Address(
         RF_Address), .Wr_Data(RF_WrData), .TX_P_DATA(UART_TX_IN), .test_si1(
-        test_si4), .test_so2(n12), .test_so1(SO[0]), .test_se(n29) );
+        SI[0]), .test_so2(n12), .test_so1(SO[1]), .test_se(n31) );
   RegFile_DEPTH16_WIDTH8_test_1 U0_RegFile ( .CLK(MUXED_REF_CLK), .RST(n7), 
         .Address({RF_Address[3:2], n4, n3}), .WrEn(RF_WrEn), .RdEn(RF_RdEn), 
         .WrData(RF_WrData), .RdData(RF_RdData), .RdValid(RF_RdData_VLD), 
         .REG0(Operand_A), .REG1(Operand_B), .REG2(UART_Config), .REG3(
-        DIV_RATIO), .test_si2(SI[0]), .test_si1(SYNC_UART_RST), .test_so1(
-        SO[1]), .test_se(SE) );
+        DIV_RATIO), .test_si2(SI[1]), .test_si1(SYNC_UART_RST), .test_so1(
+        SO[2]), .test_se(SE) );
   ALU_WIDTH8_test_1 U0_ALU ( .CLK(ALU_CLK), .RST(n7), .EN(ALU_EN), .ALU_FUN(
         ALU_FUN), .A(Operand_A), .B(Operand_B), .ALU_OUT(ALU_OUT), .OUT_VALID(
-        ALU_OUT_VLD), .test_si(SI[2]), .test_se(n24) );
+        ALU_OUT_VLD), .test_si(SI[3]), .test_se(n26) );
   CLK_GATE U0_CLK_GATE ( .CLK(MUXED_REF_CLK), .CLK_EN(CLKG_EN), .test_en(
         test_mode), .GATED_CLK(ALU_CLK) );
+  BUFX2M U12 ( .A(SYNC_REF_RST), .Y(SO[0]) );
 endmodule
 

@@ -19,7 +19,7 @@
 
 Build: 4031317
 Hostname: IC (RHEL64)
-Current time: Sat Sep 27 00:00:36 2025
+Current time: Mon Sep 29 00:10:23 2025
 
 Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
 ########################### Define Top Module ############################
@@ -28,9 +28,9 @@ SYS_TOP
 ######################### Formality Setup File ###########################
 set synopsys_auto_setup true
 true
-set_svf "/home/IC/Final_Project/Synthesis/dft/$top_module.svf"
-Error: Cannot open file: /home/IC/Final_Project/Synthesis/dft/SYS_TOP.svf (FM-203)
-0
+set_svf "/home/IC/Final_Project/DFT/dft/$top_module.svf"
+SVF set to '/home/IC/Final_Project/DFT/dft/SYS_TOP.svf'.
+1
 ###################################################################
 ########################### Variables #############################
 ###################################################################
@@ -42,119 +42,125 @@ set FFLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_
 /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
 ######################### Reference Container ############################
 # Read Reference Design Verilog Files
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_FSM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/SYS_TOP.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_TX_FSM.v'
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/SYS_TOP.v'
 Created container 'Ref'
 Current container set to 'Ref'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Parity.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_FSM.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_TX_Parity.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_TX_FSM.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Serializer.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Parity.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_TX_Serializer.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_TX_Parity.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Top.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Serializer.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_TX_Top.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_TX_Serializer.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_deserializer.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Top.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_deserializer.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_TX_Top.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_edge_counter.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_deserializer.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_edge_counter.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_deserializer.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_FSM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_edge_counter.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_FSM.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_edge_counter.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_parity_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_FSM.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_parity_check.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_FSM.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_sampler.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_parity_check.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_sampler.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_parity_check.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_start_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_sampler.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_start_check.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_sampler.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_stop_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_start_check.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_stop_check.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_start_check.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_Top.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_stop_check.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_RX_Top.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_stop_check.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_Top.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/UART_TOP.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_RX_Top.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/SYS_CTRL.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TOP.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/SYS_CTRL.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/UART_TOP.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ALU.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/SYS_CTRL.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ALU.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/SYS_CTRL.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/RegFile.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ALU.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/RegFile.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ALU.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/DATA_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/RegFile.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/DATA_SYNC.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/RegFile.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/PULSE_GEN.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/DATA_SYNC.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/PULSE_GEN.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/DATA_SYNC.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_BIT_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/PULSE_GEN.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_BIT_SYNC.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/PULSE_GEN.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_MEM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_BIT_SYNC.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_MEM.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_BIT_SYNC.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_RD.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_MEM.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_RD.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_MEM.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_WR.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_RD.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_WR.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_RD.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_WR.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_TOP.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_WR.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/Clk_Divider.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_TOP.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/Clk_Divider.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_TOP.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/CLK_GATE.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/Clk_Divider.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/CLK_GATE.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/Clk_Divider.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/RST_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/CLK_GATE.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/RST_SYNC.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/CLK_GATE.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/CLKDIV_MUX.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/RST_SYNC.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/CLKDIV_MUX.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/RST_SYNC.v'
 1
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/SYS_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/CLKDIV_MUX.v"
 No target library specified, default is WORK
-Loading verilog file '/home/IC/Final_Project/Synthesis/RTL/SYS_TOP.v'
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/CLKDIV_MUX.v'
+1
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/MUX_2X1.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Final_Project/DFT/RTL/MUX_2X1.v'
 1
 # Read Reference technology libraries
 read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
@@ -169,6 +175,7 @@ Reference design set to 'Ref:/WORK/SYS_TOP'
 set_top $top_module
 Setting top design to 'Ref:/WORK/SYS_TOP'
 Status:   Elaborating design SYS_TOP   ...  
+Status:   Elaborating design MUX_2X1   ...  
 Status:   Elaborating design RST_SYNC  NUM_STAGES=2 ...  
 Information: Created design named 'RST_SYNC_NUM_STAGES2'. (FE-LINK-13)
 Status:   Elaborating design DATA_SYNC  NUM_STAGES=2, BUS_WIDTH=8 ...  
@@ -249,25 +256,31 @@ Implementation design set to 'Imp:/WORK/SYS_TOP'
 # do not verify scan out ports as a compare point 
 # As it is existed only after synthesis and not existed in the RTL
 #scan_out
-set_dont_verify_points -type port Ref:/WORK/*/SO
-Error: Unknown name: 'Ref:/WORK/*/SO' (FM-036)
-0
-set_dont_verify_points -type port Imp:/WORK/*/SO
-Error: Unknown name: 'Imp:/WORK/*/SO' (FM-036)
-0
+set_dont_verify_points -type port Ref:/WORK/*/SO*
+Set don't verify point 'Ref:/WORK/SYS_TOP/SO[0]'
+Set don't verify point 'Ref:/WORK/SYS_TOP/SO[1]'
+Set don't verify point 'Ref:/WORK/SYS_TOP/SO[2]'
+Set don't verify point 'Ref:/WORK/SYS_TOP/SO[3]'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SO*
+Set don't verify point 'Imp:/WORK/SYS_TOP/SO[0]'
+Set don't verify point 'Imp:/WORK/SYS_TOP/SO[1]'
+Set don't verify point 'Imp:/WORK/SYS_TOP/SO[2]'
+Set don't verify point 'Imp:/WORK/SYS_TOP/SO[3]'
+1
 ############################# contants #############################
 # all atpg enable (test_mode, scan_enable) are zero during formal compare
 #test_mode
 set_constant Ref:/WORK/*/test_mode 0
-Error: Unknown name: 'Ref:/WORK/*/test_mode' (FM-036)
-0
+Set 'Ref:/WORK/SYS_TOP/test_mode' to constant 0
+1
 set_constant Imp:/WORK/*/test_mode 0
 Set 'Imp:/WORK/SYS_TOP/test_mode' to constant 0
 1
 #scan_enable
 set_constant Ref:/WORK/*/SE 0
-Error: Unknown name: 'Ref:/WORK/*/SE' (FM-036)
-0
+Set 'Ref:/WORK/SYS_TOP/SE' to constant 0
+1
 set_constant Imp:/WORK/*/SE 0
 Set 'Imp:/WORK/SYS_TOP/SE' to constant 0
 1
@@ -276,23 +289,52 @@ match
 Reference design is 'Ref:/WORK/SYS_TOP'
 Implementation design is 'Imp:/WORK/SYS_TOP'
 Status:  Checking designs...
-    Warning: 0 (12) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+    Warning: 4 (12) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
 Status:  Building verification models...
+Status:  Processing Guide Commands...
+    Set 'Ref:/WORK/SYS_TOP/SE' to constant 0    
+    Set 'Imp:/WORK/SYS_TOP/SE' to constant 0    
+    Set 'Ref:/WORK/SYS_TOP/test_mode' to constant 1    
+    Set 'Imp:/WORK/SYS_TOP/test_mode' to constant 1    
+    Set 'Imp:/WORK/SYS_TOP/SE' to constant 0    ; previous value was also 0
+    Set 'Imp:/WORK/SYS_TOP/test_mode' to constant 1    ; previous value was also 1
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+instance_map        :         28          0          0          0         28
+mark                :         24          0          0          0         24
+multiplier          :          2          0          0          0          2
+replace             :          3          0          0          0          3
+scan_input          :          2          0          0          0          2
+transformation
+   map              :         20          0          0          0         20
+   share            :          7          0          0          0          7
+uniquify            :         33          2          0          0         35
+ununiquify          :          1          0          0          0          1
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/IC/Final_Project/DFT/dft/SYS_TOP.svf
+
+SVF files produced:
+  /home/IC/Final_Project/Post_DFT_Formality/formality_svf/
+    svf.txt
+****************************************************************************
+
 Status:  Matching...
     
 *********************************** Matching Results ***********************************    
  366 Compare points matched by name    
  0 Compare points matched by signature analysis    
  0 Compare points matched by topology    
- 4 Matched primary inputs, black-box outputs    
- 0(4) Unmatched reference(implementation) compare points    
- 0(2) Unmatched reference(implementation) primary inputs, black-box outputs    
- 2(6) Unmatched reference(implementation) unread points    
-----------------------------------------------------------------------------------------    
-Unmatched Objects                                                        REF        IMPL    
-----------------------------------------------------------------------------------------    
- Input ports (Port)                                                        0           2    
- Output ports (Port)                                                       0           4    
+ 5 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 2(0) Unmatched reference(implementation) unread points    
 ****************************************************************************************
 
 1
@@ -305,15 +347,10 @@ Implementation design is 'Imp:/WORK/SYS_TOP'
  366 Compare points matched by name    
  0 Compare points matched by signature analysis    
  0 Compare points matched by topology    
- 4 Matched primary inputs, black-box outputs    
- 0(4) Unmatched reference(implementation) compare points    
- 0(2) Unmatched reference(implementation) primary inputs, black-box outputs    
- 2(6) Unmatched reference(implementation) unread points    
-----------------------------------------------------------------------------------------    
-Unmatched Objects                                                        REF        IMPL    
-----------------------------------------------------------------------------------------    
- Input ports (Port)                                                        0           2    
- Output ports (Port)                                                       0           4    
+ 5 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 2(0) Unmatched reference(implementation) unread points    
 ****************************************************************************************
 
 Status:  Verifying...
@@ -334,6 +371,9 @@ Status:  Verifying...
 
 ### Test Logic Setup
    set verification_verify_directly_undriven_output false
+   Constants set on:
+     SYS_TOP/SE
+     SYS_TOP/test_mode
    For details see report_dont_verify_points and report_constants
 
 
@@ -354,6 +394,8 @@ Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT
 ----------------------------------------------------------------------------------------
 Passing (equivalent)           0       0       0       0       3     362       1     366
 Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       4       0       0       4
 ****************************************************************************************
 1
 if {!$successful} {
@@ -369,9 +411,9 @@ start_gui
 1
 1
 fm_shell (verify)> 
-Maximum memory usage for this session: 456876 KB
-CPU usage for this session: 11.2 seconds
-Current time: Sat Sep 27 00:01:03 2025
-Elapsed time: 37 seconds
+Maximum memory usage for this session: 458892 KB
+CPU usage for this session: 4.41 seconds
+Current time: Mon Sep 29 00:10:43 2025
+Elapsed time: 31 seconds
 
 Thank you for using Formality (R)!

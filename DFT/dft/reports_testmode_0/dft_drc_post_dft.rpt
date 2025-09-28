@@ -414,26 +414,27 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
 ....Inferring feed-through connections....
 Information: Test design rule checking completed. (TEST-123)
   Running test coverage estimation...
- 15694 faults were added to fault list.
- 0            7090   5330         0/0/0    65.40%      0.00
- 0            1624   3703         1/0/0    75.85%      0.00
- 0             719   2983         2/0/0    80.48%      0.00
- 0             527   2455         3/0/1    83.88%      0.00
- 0             488   1964         5/0/1    87.03%      0.00
- 0             372   1592         5/0/1    89.42%      0.00
- 0             250   1337         9/0/1    91.06%      0.00
- 0             207   1126        10/1/1    92.41%      0.00
- 0             250    874        11/1/2    94.03%      0.00
- 0             105    765        15/1/2    94.73%      0.00
- 0             146    612        21/1/3    95.71%      0.00
- 0              93    515        25/1/4    96.34%      0.00
- 0             100    410        30/1/4    97.01%      0.00
- 0             116    285        37/1/4    97.82%      0.00
- 0              65    210        42/1/4    98.30%      0.00
- 0              82    117        48/1/5    98.90%      0.00
- 0              48     60        53/1/5    99.27%      0.00
- 0              47     11        54/1/6    99.58%      0.00
- 0               2      9        54/1/6    99.60%      0.08
+ 15710 faults were added to fault list.
+ Begin deterministic ATPG: #uncollapsed_faults=12420, abort_limit=10...
+ 0            7093   5327         0/0/0    65.38%      0.00
+ 0            1668   3657         1/0/0    76.10%      0.00
+ 0             677   2980         1/0/0    80.45%      0.00
+ 0             583   2397         1/0/0    84.19%      0.00
+ 0             440   1956         2/0/0    87.02%      0.00
+ 0             318   1635         4/0/0    89.08%      0.00
+ 0             277   1355         6/0/0    90.88%      0.00
+ 0             178   1172         9/0/0    92.05%      0.00
+ 0             141   1024        11/0/0    93.00%      0.00
+ 0             185    836        13/0/0    94.21%      0.07
+ 0             117    717        15/0/0    94.97%      0.07
+ 0             192    520        20/0/0    96.24%      0.07
+ 0             102    412        24/0/1    96.93%      0.07
+ 0             118    288        28/0/1    97.73%      0.07
+ 0              58    225        32/0/1    98.14%      0.07
+ 0              84    134        36/1/1    98.71%      0.07
+ 0              51     69        46/1/3    99.13%      0.07
+ 0              37     21        54/1/4    99.44%      0.07
+ 0              12      9        54/1/4    99.52%      0.07
  
             Pattern Summary Report
  -----------------------------------------------
@@ -445,14 +446,14 @@ Information: Test design rule checking completed. (TEST-123)
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      15414
+ Detected                         DT      15418
  Possibly detected                PT          1
  Undetectable                     UD        217
- ATPG untestable                  AU         54
+ ATPG untestable                  AU         66
  Not detected                     ND          8
  -----------------------------------------------
- total faults                             15694
- test coverage                            99.60%
+ total faults                             15710
+ test coverage                            99.52%
  -----------------------------------------------
   Information: The test coverage above may be inferior
                than the real test coverage with customized

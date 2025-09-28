@@ -4,7 +4,7 @@ Report : port
         -verbose
 Design : SYS_TOP
 Version: K-2015.06
-Date   : Fri Sep 26 23:34:21 2025
+Date   : Sun Sep 28 23:57:14 2025
 ****************************************
 
 
@@ -21,19 +21,19 @@ SE             in      0.0000   0.0000    1.50    0.18   --
 SI[0]          in      0.0000   0.0000    1.50    0.18   --         
 SI[1]          in      0.0000   0.0000    1.50    0.18   --         
 SI[2]          in      0.0000   0.0000    1.50    0.18   --         
+SI[3]          in      0.0000   0.0000    1.50    0.18   --         
 UART_CLK       in      0.0000   0.0000   --      --      --         d
 UART_RX_IN     in      0.0000   0.0000    1.50    0.18   --         
 scan_clk       in      0.0000   0.0000   --      --      --         d
 scan_rst       in      0.0000   0.0000   --      --      --         
 test_mode      in      0.0000   0.0000   --      --      --         
-test_si4       in      0.0000   0.0000   --      --      --         
 SO[0]          out     0.1000   0.0000   --      --      --         
 SO[1]          out     0.1000   0.0000   --      --      --         
 SO[2]          out     0.1000   0.0000   --      --      --         
+SO[3]          out     0.1000   0.0000   --      --      --         
 UART_TX_O      out     0.1000   0.0000   --      --      --         
 framing_error  out     0.1000   0.0000   --      --      --         
 parity_error   out     0.1000   0.0000   --      --      --         
-test_so4       out     0.0000   0.0000   --      --      --         
 
 
               External  Max             Min                Min       Min
@@ -46,19 +46,19 @@ SE                 1      --              --              --        --
 SI[0]              1      --              --              --        -- 
 SI[1]              1      --              --              --        -- 
 SI[2]              1      --              --              --        -- 
+SI[3]              1      --              --              --        -- 
 UART_CLK           1      --              --              --        -- 
 UART_RX_IN         1      --              --              --        -- 
 scan_clk           1      --              --              --        -- 
 scan_rst           1      --              --              --        -- 
 test_mode          1      --              --              --        -- 
-test_si4           1      --              --              --        -- 
 SO[0]              1      --              --              --        -- 
 SO[1]              1      --              --              --        -- 
 SO[2]              1      --              --              --        -- 
+SO[3]              1      --              --              --        -- 
 UART_TX_O          1      --              --              --        -- 
 framing_error      1      --              --              --        -- 
 parity_error       1      --              --              --        -- 
-test_so4           1      --              --              --        -- 
 
                     Input Delay
                   Min             Max       Related   Max
@@ -70,12 +70,12 @@ SE           60.00   60.00   60.00   60.00  DFT_CLK   --
 SI[0]        60.00   60.00   60.00   60.00  DFT_CLK   --    
 SI[1]        60.00   60.00   60.00   60.00  DFT_CLK   --    
 SI[2]        60.00   60.00   60.00   60.00  DFT_CLK   --    
+SI[3]        60.00   60.00   60.00   60.00  DFT_CLK   --    
 UART_CLK      --      --      --      --      --      -- 
 UART_RX_IN   54.26   54.26   54.26   54.26  RX_CLK    --    
 scan_clk      --      --      --      --      --      -- 
 scan_rst      --      --      --      --      --      -- 
 test_mode     --      --      --      --      --      -- 
-test_si4      --      --      --      --      --      -- 
 
 
                     Driving Cell
@@ -93,6 +93,9 @@ SI[1]        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
 SI[2]        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
                                 scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
                                                      -- /  --     
+SI[3]        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
+                                scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
+                                                     -- /  --     
 UART_RX_IN   scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
                                 scmetro_tsmc_cl013g_rvt_ss_1p08v_125c/BUFX2M/Y
                                                      -- /  --     
@@ -107,12 +110,12 @@ SE            --      --     --      --     --      --     --     --        --
 SI[0]         --      --     --      --     --      --     --     --        -- 
 SI[1]         --      --     --      --     --      --     --     --        -- 
 SI[2]         --      --     --      --     --      --     --     --        -- 
+SI[3]         --      --     --      --     --      --     --     --        -- 
 UART_CLK      --      --     --      --     --      --     --     --        -- 
 UART_RX_IN    --      --     --      --     --      --     --     --        -- 
 scan_clk      --      --     --      --     --      --     --     --        -- 
 scan_rst      --      --     --      --     --      --     --     --        -- 
 test_mode     --      --     --      --     --      --     --     --        -- 
-test_si4      --      --     --      --     --      --     --     --        -- 
 
 
                Max Tran        Min Tran
@@ -124,12 +127,12 @@ SE            --      --      --      --
 SI[0]         --      --      --      -- 
 SI[1]         --      --      --      -- 
 SI[2]         --      --      --      -- 
+SI[3]         --      --      --      -- 
 UART_CLK      --      --      --      -- 
 UART_RX_IN    --      --      --      -- 
 scan_clk      --      --      --      -- 
 scan_rst      --      --      --      -- 
 test_mode     --      --      --      -- 
-test_si4      --      --      --      -- 
 
 
                     Output Delay
@@ -139,11 +142,11 @@ Output Port   Rise    Fall    Rise    Fall  Clock     Load
 SO[0]        60.00   60.00   60.00   60.00  DFT_CLK   0.00  
 SO[1]        60.00   60.00   60.00   60.00  DFT_CLK   0.00  
 SO[2]        60.00   60.00   60.00   60.00  DFT_CLK   0.00  
+SO[3]        60.00   60.00   60.00   60.00  DFT_CLK   0.00  
 UART_TX_O   1736.30 1736.30 1736.30 1736.30 TX_CLK    0.00  
 framing_error
              54.26   54.26   54.26   54.26  RX_CLK    0.00  
 parity_error
              54.26   54.26   54.26   54.26  RX_CLK    0.00  
-test_so4      --      --      --      --      --      0.00
 
 1

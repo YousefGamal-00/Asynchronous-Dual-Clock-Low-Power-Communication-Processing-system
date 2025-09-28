@@ -7,7 +7,7 @@ set top_module SYS_TOP
 
 set synopsys_auto_setup true
 
-set_svf "/home/IC/Final_Project/Synthesis/dft/$top_module.svf"
+set_svf "/home/IC/Final_Project/DFT/dft/$top_module.svf"
 
 ###################################################################
 ########################### Variables #############################
@@ -20,34 +20,36 @@ set FFLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_
 ######################### Reference Container ############################
 
 # Read Reference Design Verilog Files
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_FSM.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Parity.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Serializer.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TX_Top.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_deserializer.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_edge_counter.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_FSM.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_parity_check.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_sampler.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_start_check.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_stop_check.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_RX_Top.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/UART_TOP.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/SYS_CTRL.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ALU.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/RegFile.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/DATA_SYNC.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/PULSE_GEN.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_BIT_SYNC.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_MEM.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_RD.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_WR.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/ASYNC_FIFO_TOP.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/Clk_Divider.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/CLK_GATE.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/RST_SYNC.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/CLKDIV_MUX.v"
-read_verilog -container Ref "/home/IC/Final_Project/Synthesis/RTL/SYS_TOP.v"
+
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/SYS_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_FSM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Parity.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Serializer.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TX_Top.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_deserializer.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_edge_counter.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_FSM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_parity_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_sampler.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_start_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_stop_check.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_RX_Top.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/UART_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/SYS_CTRL.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ALU.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/RegFile.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/DATA_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/PULSE_GEN.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_BIT_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_MEM.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_RD.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_WR.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/ASYNC_FIFO_TOP.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/Clk_Divider.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/CLK_GATE.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/RST_SYNC.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/CLKDIV_MUX.v"
+read_verilog -container Ref "/home/IC/Final_Project/DFT/RTL/MUX_2X1.v"
 
 # Read Reference technology libraries
 read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
@@ -76,8 +78,8 @@ set_top $top_module
 # As it is existed only after synthesis and not existed in the RTL
 
 #scan_out
-set_dont_verify_points -type port Ref:/WORK/*/SO
-set_dont_verify_points -type port Imp:/WORK/*/SO
+set_dont_verify_points -type port Ref:/WORK/*/SO*
+set_dont_verify_points -type port Imp:/WORK/*/SO*
 
 
 ############################# contants #############################

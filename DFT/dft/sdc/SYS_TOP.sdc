@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Fri Sep 26 23:34:21 2025
+# Created by write_sdc on Sun Sep 28 23:57:13 2025
 
 ###################################################################
 set sdc_version 2.0
@@ -8,10 +8,12 @@ set sdc_version 2.0
 set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
 set_operating_conditions -max scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -max_library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -min scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c -min_library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
 set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports SE]
+set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[3]}]
 set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[2]}]
 set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[1]}]
 set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[0]}]
 set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports UART_RX_IN]
+set_load -pin_load 0.1 [get_ports {SO[3]}]
 set_load -pin_load 0.1 [get_ports {SO[2]}]
 set_load -pin_load 0.1 [get_ports {SO[1]}]
 set_load -pin_load 0.1 [get_ports {SO[0]}]
@@ -53,6 +55,7 @@ set_clock_transition -max -fall 0.05 [get_clocks DFT_CLK]
 set_clock_transition -min -rise 0.05 [get_clocks DFT_CLK]
 set_clock_transition -max -rise 0.05 [get_clocks DFT_CLK]
 set_input_delay -clock RX_CLK  54.2594  [get_ports UART_RX_IN]
+set_input_delay -clock DFT_CLK  60  [get_ports {SI[3]}]
 set_input_delay -clock DFT_CLK  60  [get_ports {SI[2]}]
 set_input_delay -clock DFT_CLK  60  [get_ports {SI[1]}]
 set_input_delay -clock DFT_CLK  60  [get_ports {SI[0]}]
@@ -60,6 +63,7 @@ set_input_delay -clock DFT_CLK  60  [get_ports SE]
 set_output_delay -clock TX_CLK  1736.3  [get_ports UART_TX_O]
 set_output_delay -clock RX_CLK  54.2594  [get_ports parity_error]
 set_output_delay -clock RX_CLK  54.2594  [get_ports framing_error]
+set_output_delay -clock DFT_CLK  60  [get_ports {SO[3]}]
 set_output_delay -clock DFT_CLK  60  [get_ports {SO[2]}]
 set_output_delay -clock DFT_CLK  60  [get_ports {SO[1]}]
 set_output_delay -clock DFT_CLK  60  [get_ports {SO[0]}]
